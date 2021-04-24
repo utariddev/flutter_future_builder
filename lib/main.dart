@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'request.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -37,6 +39,12 @@ class MyHomePage extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Request()),
+          );
+        },
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ),
